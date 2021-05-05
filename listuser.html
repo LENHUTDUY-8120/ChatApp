@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Realtime Chat App</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
-	<div class="warapper">
-		<section>
+	<div class="wrapper">
+		<section class="users">
 			<header>
-				<div class="contents">
-					<img src="icon.png" width="100px" height="100px">
+				<div class="content">
+					<img src="icon.png">
+					<div class="info">
+						<span>Le Nhut Duy</span>
+						<p>Active</p>
+					</div>
 				</div>
-				<div class="info">
-					<span>Le Nhut Duy</span>
-					<p>Active</p>
-				</div>
+				<a href="#" class="logout">Logout</a>
 			</header>
 			<div class="search">
-				
+				<span class="text">Select an user to start chat</span>
+        		<input type="text" placeholder="Enter name to search...">
+        		<button><i class="fas fa-search"></i></button>
 			</div>
-			<div class="list-user">
-				
+			<div class="users-list">
+				<a href="#">
+					<div class="content">
+						<img src="">
+						<div class="info">
+							<span>le nhut duy</span>
+							<p>this is test messages</p>
+						</div>
+					</div>
+					<div class="status-dot"><i class="fas fa-circle"></i></div>
+				</a>
 			</div>
 		</section>
 	</div>
