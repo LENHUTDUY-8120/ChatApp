@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='accountuser.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator">
+            </div>
+            
+            <form id="LoginForm">
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
+                <div class="submit">
+                    <button type="submit" class="btn" name="login">Login</button>
+                </div>
+            </form>
+
+            <form id="Register">
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
+                <input type="password" placeholder="Confirm password" name="confirmpassword">
+                <div class="submit">
+                    <button type="submit" class="btn" name="register">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var Register = document.getElementById("Register");
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            Register.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login(){
+            Register.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+</body>
+</html>

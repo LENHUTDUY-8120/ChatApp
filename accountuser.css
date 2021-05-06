@@ -1,0 +1,82 @@
+body{
+    margin-top: 10%;
+    background-image: url("background.jpg");
+}
+.form-container{
+    background-color: yellow;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 0px 10px 0px #666;
+
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding-top: 10px;
+    width: 100px;
+    display: inline-block;
+    cursor: pointer;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    margin: 30px 0;
+    
+    position: absolute;
+    max-width: 300px;
+    transition: transform 1s;
+}
+form input{
+    width: 200px;
+    height: 35px;
+    margin: 5px 0;
+    padding: 0 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+form .btn{
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 220px;
+    padding: 10px;
+    margin-top: 5px; 
+    cursor: pointer;
+
+    transition: background 0.5s;
+}
+form .btn:hover{
+    background: #563434;
+}
+form .btn:focus{
+    outline: none;
+}
+
+#LoginForm{
+    margin-top: 30%;
+    left: -300px;
+}
+#Register{
+    margin-top: 20%;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 10px;
+    margin-left: 5px;
+
+    transform: translateX(100px);
+    
+    transition: transform 1s;
+}
