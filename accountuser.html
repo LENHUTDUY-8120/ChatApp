@@ -8,6 +8,9 @@
 <body>
     <div class="container">
         <div class="form-container">
+            <div class="title">
+                <h1>Realtime Chat App</h1>
+            </div>
             <div class="form-btn">
                 <span onclick="login()">Login</span>
                 <span onclick="register()">Register</span>
@@ -15,20 +18,29 @@
             </div>
             
             <form id="LoginForm">
-                <input type="text" placeholder="Username" name="username">
-                <input type="password" placeholder="Password" name="password">
+                <input type="email" placeholder="Enter your email" name="email">
+                <input type="password" placeholder="Enter your password" name="password">
                 <div class="submit">
                     <button type="submit" class="btn" name="login">Login</button>
                 </div>
+                <span>Not yet signed up?</span><u onclick="register()">Signup now</u>
             </form>
 
             <form id="Register">
-                <input type="text" placeholder="Username" name="username">
+                <div class="nameuser">
+                    <input type="text" placeholder="First name" name="firstname">
+                    <input type="text" placeholder="Last name" name="lastname">
+                </div>
+                <input type="email" placeholder="Enter your email" name="email">
                 <input type="password" placeholder="Password" name="password">
                 <input type="password" placeholder="Confirm password" name="confirmpassword">
+                <div class="filename">
+                    <input type="file" name="img_file">
+                </div>
                 <div class="submit">
                     <button type="submit" class="btn" name="register">Register</button>
                 </div>
+                <span>Already signed up?</span><u onclick="login()">Login now</u>
             </form>
         </div>
     </div>
@@ -37,15 +49,15 @@
         var Register = document.getElementById("Register");
         var Indicator = document.getElementById("Indicator");
 
-        function register(){
+        function login(){
             Register.style.transform = "translateX(0px)";
             LoginForm.style.transform = "translateX(0px)";
-            Indicator.style.transform = "translateX(100px)";
+            Indicator.style.transform = "translateX(-80px)";
         }
-        function login(){
-            Register.style.transform = "translateX(300px)";
-            LoginForm.style.transform = "translateX(300px)";
-            Indicator.style.transform = "translateX(0px)";
+        function register(){
+            Register.style.transform = "translateX(400px)";
+            LoginForm.style.transform = "translateX(400px)";
+            Indicator.style.transform = "translateX(80px)";
         }
     </script>
 </body>

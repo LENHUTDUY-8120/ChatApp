@@ -7,16 +7,24 @@ body{
     margin: auto;
     text-align: center;
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     box-shadow: 0px 0px 10px 0px #666;
 
     overflow: hidden;
 }
+.title h1{
+    font-size: 27px;
+    text-align: left;
+    padding: 10px 0;
+    margin: 0 35px;
+    border-bottom: 1px solid black;
+}
+
 .form-container span{
     font-weight: bold;
     padding-top: 10px;
-    width: 100px;
+    width: 150px;
     display: inline-block;
     cursor: pointer;
 }
@@ -24,27 +32,32 @@ body{
     display: inline-block;
 }
 .form-container form{
-    margin: 30px 0;
-    
     position: absolute;
-    max-width: 300px;
+    max-width: 400px;
     transition: transform 1s;
 }
 form input{
-    width: 200px;
+    width: 300px;
     height: 35px;
     margin: 5px 0;
     padding: 0 10px;
     border: 1px solid white;
     border-radius: 10px;
 }
-
+form .nameuser input{
+    width: 130px;
+    margin: 5px 5px;
+}
+form .filename input{
+    border: none;
+    margin-left: -15px;
+}
 form .btn{
     background-color: red;
     border-radius: 10px;
     border: none;
     color: white;
-    width: 220px;
+    width: 310px;
     padding: 10px;
     margin-top: 5px; 
     cursor: pointer;
@@ -59,24 +72,26 @@ form .btn:focus{
 }
 
 #LoginForm{
-    margin-top: 30%;
-    left: -300px;
-}
-#Register{
     margin-top: 20%;
 }
-form a{
-    font-size: 12px;
+#Register{
+    left: -400px;
+    margin-top: 15%;
 }
+
 #Indicator{
-    width: 100px;
+    width: 150px;
     border: none;
     background: #ff523b;
     height: 3px;
-    margin-top: 10px;
-    margin-left: 5px;
 
-    transform: translateX(100px);
-    
+    transform: translateX(-80px);    
     transition: transform 1s;
+}
+u{
+    color: blue;
+    cursor: pointer;
+}
+u:hover{
+    color: red;
 }
