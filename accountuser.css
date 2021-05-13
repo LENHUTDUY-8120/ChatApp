@@ -37,20 +37,40 @@ body{
     transition: transform 1s;
 }
 form input{
-    width: 300px;
+    width: 250px;
     height: 35px;
-    margin: 5px 0;
-    padding: 0 10px;
     border: 1px solid white;
     border-radius: 10px;
+    outline: none;
 }
 form .nameuser input{
     width: 130px;
     margin: 5px 5px;
-}
+    padding: 0 0 0 10px;
+    
+} 
 form .filename input{
+    outline: none;
     border: none;
-    margin-left: -15px;
+    margin-left: -50px;
+    padding-top: 10px;
+}
+form .filename input:hover{
+    outline: none;
+}
+form .input{
+    width: 300px;
+    display: inline-block;
+    background: white;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+form .input i{
+    color: #ccc;
+}
+form .input i.active::before{
+    content: "\f070";
+    color: #333;;
 }
 form .btn{
     background-color: red;

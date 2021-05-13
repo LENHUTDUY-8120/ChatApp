@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Account</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='accountuser.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
     <div class="container">
@@ -18,8 +19,13 @@
             </div>
             
             <form id="LoginForm">
-                <input type="email" placeholder="Enter your email" name="email">
-                <input type="password" placeholder="Enter your password" name="password">
+                <div class="input">
+                    <input type="email" placeholder="Enter your email" name="email" style="margin-right: 20px;">
+                </div>
+                <div class="input">
+                    <input id="lgpass" type="password" placeholder="Enter your password" name="password">
+                    <i id="lgsee" class="fas fa-eye" onclick="hide_show('lgpass', 'lgsee')"></i>
+                </div>
                 <div class="submit">
                     <button type="submit" class="btn" name="login">Login</button>
                 </div>
@@ -31,9 +37,17 @@
                     <input type="text" placeholder="First name" name="firstname">
                     <input type="text" placeholder="Last name" name="lastname">
                 </div>
-                <input type="email" placeholder="Enter your email" name="email">
-                <input type="password" placeholder="Password" name="password">
-                <input type="password" placeholder="Confirm password" name="confirmpassword">
+                <div class="input">
+                    <input type="email" placeholder="Enter your email" name="email" style="margin-right: 20px;">
+                </div>
+                <div class="input">
+                    <input id="sgpassword" type="password" placeholder="Password" name="password">
+                    <i id="sgsee" class="fas fa-eye" onclick="hide_show('sgpassword', 'sgsee')"></i>
+                </div>
+                <div class="input">
+                    <input id="rsgpassword" type="password" placeholder="Confirm password" name="confirmpassword">
+                    <i id="rsgsee"class="fas fa-eye" onclick="hide_show('rsgpassword', 'rsgsee')"></i>
+                </div>
                 <div class="filename">
                     <input type="file" name="img_file">
                 </div>
@@ -58,6 +72,19 @@
             Register.style.transform = "translateX(400px)";
             LoginForm.style.transform = "translateX(400px)";
             Indicator.style.transform = "translateX(80px)";
+        }
+
+        function hide_show(id, tagid){
+            pwdField = document.getElementById(id);
+            toggleBtn = document.getElementById(tagid);
+            
+            if(pwdField.type == "password"){
+                pwdField.type = "text";
+                toggleBtn.classList.add("active");
+            }else{
+                pwdField.type = "password";
+                toggleBtn.classList.remove("active");
+            }
         }
     </script>
 </body>

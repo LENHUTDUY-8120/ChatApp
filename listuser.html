@@ -24,8 +24,8 @@
 			</header>
 			<div class="search">
 				<span class="text">Select an user to start chat</span>
-        		<input type="text" placeholder="Enter name to search...">
-        		<button><i class="fas fa-search"></i></button>
+        		<input id="search_kw" type="text" placeholder="Enter name to search...">
+        		<button id="search" onclick="search()"><i class="fas fa-search"></i></button>
 			</div>
 			<div class="users-list">
 				<a href="#">
@@ -81,5 +81,14 @@
 			</div>
 		</section>
 	</div>
+	<script>
+		var searchBar = document.getElementById("search_kw");
+		var searchBtn = document.getElementById("search");
+		function search(){
+			searchBar.classList.toggle("active");
+			searchBar.focus();
+			searchBtn.classList.toggle("active");
+		}
+	</script>
 </body>
 </html>
