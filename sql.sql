@@ -14,6 +14,8 @@ CREATE TABLE USERS (
 	img varchar(255) NOT NULL,
 	`status` varchar(255) NOT NULL
 );
+select * from USERS;
+insert into USERS values(123,"8120","le","nhutduy","nhutduy30520@gmail.com","8120","icon.png","");
 
 CREATE TABLE MESSAGES (
 	msg_id int(11) NOT NULL,
@@ -21,6 +23,9 @@ CREATE TABLE MESSAGES (
 	outgoing_msg_id int(255) NOT NULL,
 	msg varchar(1000) NOT NULL
 );
+
+select * from MESSAGES;
+insert into MESSAGES(incoming_msg_id, outgoing_msg_id, msg) values ("123","",);
 
 ALTER TABLE MESSAGES
   ADD PRIMARY KEY (`msg_id`);
@@ -34,3 +39,5 @@ ALTER TABLE MESSAGES
 ALTER TABLE USERS
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+show databases;
