@@ -5,8 +5,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 
 CREATE TABLE USERS (
-	user_id int(11) NOT NULL,
-    unique_id int(255) NOT NULL,
+	user_id int(11) PRIMARY KEY  AUTO_INCREMENT,
 	fname varchar(255) NOT NULL,
 	lname varchar(255) NOT NULL,
 	email varchar(255) NOT NULL,
@@ -14,30 +13,36 @@ CREATE TABLE USERS (
 	img varchar(255) NOT NULL,
 	`status` varchar(255) NOT NULL
 );
-select * from USERS;
-insert into USERS values(123,"8120","le","nhutduy","nhutduy30520@gmail.com","8120","icon.png","");
+
+select * from USERS where user_id = 1;
+SELECT * FROM USERS WHERE NOT user_id = 1 ORDER BY user_id DESC
+insert into USERS(fname, lname, email, `password`, img, `status`) 
+	values("le","nhut duy","nhutduy30520@gmail.com","8120","icon.png","");
+insert into USERS(fname, lname, email, `password`, img, `status`) 
+	values("Nguyen","Quoc Nil","nil123@gmail.com","12345","icon.png","");
+insert into USERS(fname, lname, email, `password`, img, `status`) 
+	values("Sang","Bùi","sangvui@gmail.com","8120","icon.png","Offline");
+
 
 CREATE TABLE MESSAGES (
-	msg_id int(11) NOT NULL,
+	msg_id int(11) PRIMARY KEY AUTO_INCREMENT,
 	incoming_msg_id int(255) NOT NULL,
 	outgoing_msg_id int(255) NOT NULL,
 	msg varchar(1000) NOT NULL
 );
 
+insert into MESSAGES(incoming_msg_id, outgoing_msg_id, msg) 
+	values(1,3,"hello");
+insert into MESSAGES(incoming_msg_id, outgoing_msg_id, msg) 
+	values(1,3,"how are you???");
+insert into MESSAGES(incoming_msg_id, outgoing_msg_id, msg) 
+	values(3,1,"im fine, thank you and you!!!");
+
+
 select * from MESSAGES;
-insert into MESSAGES(incoming_msg_id, outgoing_msg_id, msg) values ("123","",);
 
-ALTER TABLE MESSAGES
-  ADD PRIMARY KEY (`msg_id`);
+SELECT * FROM MESSAGES WHERE (incoming_msg_id = 4
+			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
+                OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
 
-ALTER TABLE USERS
-  ADD PRIMARY KEY (`user_id`);
-
-ALTER TABLE MESSAGES
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE USERS
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
-
-show databases;
