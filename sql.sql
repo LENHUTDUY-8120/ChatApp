@@ -18,6 +18,8 @@ CREATE TABLE USERS (
 	`status` varchar(255) NOT NULL
 );
 
+ALTER TABLE USERS ADD COLUMN id_confirm int;
+
 select * from USERS where user_id = 1;
 SELECT * FROM USERS WHERE NOT user_id = 1 ORDER BY user_id DESC
 insert into USERS(fname, lname, email, `password`, img, `status`) 

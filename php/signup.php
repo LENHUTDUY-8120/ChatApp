@@ -34,9 +34,9 @@
 
                             if($password == $repassword){
                                 $password = password_hash($password, PASSWORD_DEFAULT);
+                                $id_confirm = rand(time(), 10000000);
                                 
-                                $sql2 = mysqli_query($conn, "INSERT INTO users (fname, lname, email, password, img, status) VALUES ('$fname', '$lname', '$email', '$password', '$img_name', '$status')");
-                        
+                                $sql2 = mysqli_query($conn, "INSERT INTO users (fname, lname, email, password, img, status, id_confirm) VALUES ('$fname', '$lname', '$email', '$password', '$img_name', '$status', $id_confirm)");
                                 if($sql2){
 
                                 $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");

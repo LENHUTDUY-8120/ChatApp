@@ -1,0 +1,13 @@
+
+.form-container{
+    background-color: yellow;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 10px 0px #666;
+}
+.title{
+    padding: 3px;
+    font-size: 25px;
+}

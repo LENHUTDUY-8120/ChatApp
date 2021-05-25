@@ -46,7 +46,7 @@ continueBtnSignup.onclick = ()=>{
             if(xhr.status === 200){
                 let data = xhr.response;
                 if(data == "Success"){
-                    location.href = "listuser.html";
+                    location.href = "users.php";
                 }else{
                     errorTextSignup.textContent = data;
                     errorTextSignup.style.display = "block";
@@ -79,7 +79,7 @@ continueBtnLogin.onclick = ()=>{
             if(xhr.status === 200){
                 let data = xhr.response;
                 if(data == "Success"){
-                    location.href = "listuser.html";
+                    location.href = "users.php";
                 }else{
                     errorTextLogin.textContent = data;
                     errorTextLogin.style.display = "block";

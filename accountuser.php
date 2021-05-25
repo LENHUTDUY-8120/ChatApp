@@ -34,6 +34,7 @@
                         <button type="submit" class="btn" name="login">Login</button>
                     </div>
                     <span>Not yet signed up?</span><u onclick="register()">Signup now</u>
+                    <div style="margin: 10px;"><a href="forgot_pwd.php">Forgot password</a></div>
                 </form>
             </div>
             
