@@ -20,6 +20,9 @@
             
             <div class="login">
                 <form id="LoginForm">
+                    <div class="default-txt-login">
+                        <div class="error-txt-login">This is an error message!</div>
+                    </div>
                     <div class="input">
                         <input type="email" placeholder="Enter your email" name="email" style="margin-right: 20px;">
                     </div>
@@ -27,7 +30,7 @@
                         <input id="lgpass" type="password" placeholder="Enter your password" name="password">
                         <i id="lgsee" class="fas fa-eye" onclick="hide_show('lgpass', 'lgsee')"></i>
                     </div>
-                    <div class="submit">
+                    <div class="submitLogin">
                         <button type="submit" class="btn" name="login">Login</button>
                     </div>
                     <span>Not yet signed up?</span><u onclick="register()">Signup now</u>
@@ -36,7 +39,9 @@
             
             <div class="signup">
                 <form id="Register" enctype="multipart/form-data">
-                    <div class="error-txt">This is an error message!</div>
+                    <div class="default-txt-signup">
+                        <div class="error-txt-signup">This is an error message!</div>
+                    </div>
                     <div class="nameuser">
                         <input type="text" placeholder="First name" name="firstname">
                         <input type="text" placeholder="Last name" name="lastname">
@@ -55,7 +60,7 @@
                     <div class="filename">
                         <input type="file" name="img_file">
                     </div>
-                    <div class="submit">
+                    <div class="submitSignup">
                         <button type="submit" class="btn" name="register">Register</button>
                     </div>
                     <span>Already signed up?</span><u onclick="login()">Login now</u>
@@ -63,6 +68,6 @@
             </div> 
         </div>
     </div>
-    <script src="js/account.js"></script>
+    <script src="javascript/account.js"></script>
 </body>
 </html>

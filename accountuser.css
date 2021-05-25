@@ -92,11 +92,10 @@ form .btn:focus{
 }
 
 #LoginForm{
-    margin-top: 20%;
+    margin-top: 7%;
 }
 #Register{
     left: -400px;
-    margin-top: 15%;
 }
 
 #Indicator{
@@ -115,3 +114,22 @@ u{
 u:hover{
     color: red;
 }
+
+.default-txt-signup, .default-txt-login{
+    width: 290px;
+    height: 50px;
+    margin-left: 14%;
+    margin-bottom: 40px;
+}
+
+.error-txt-signup, .error-txt-login{
+    border-radius: 10px;
+    padding: 20px;
+    background: #ff523b;
+    color: #563434;
+    display: none;
+}
+.default-txt-signup{
+    margin-bottom: 10px;
+}
+
