@@ -16,7 +16,8 @@
             </div>
             <hr>
             <div class="submit">
-                <input type="submit" name="submit" value="Confirm">
+                <input type="submit" name="cancel" class="cancel" value="Cancel">
+                <input type="submit" name="submit" class="confirm" value="Confirm">
             </div>
         </form>
     </div>

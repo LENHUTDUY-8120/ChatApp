@@ -39,7 +39,20 @@
 
 
             header("Location: ../confirm.php");
+        }else{
+            echo "
+                <script>
+                    alert('Something was wrong!');
+                    window.location.href = '../forgot_pwd.php';
+                </script>
+            ";
         }
 
     }
+
+    if(isset($_POST['cancel'])){
+        header("Location: ../accountuser.php");
+    }
+
+    
 ?>

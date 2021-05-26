@@ -11,3 +11,58 @@
     padding: 3px;
     font-size: 25px;
 }
+hr{
+    width: 80%;
+    margin: auto;
+}
+.email{
+    margin: 80px 20px;
+}
+.email input{
+    height: 40px;
+    width: 80%;
+}
+.submit{
+    padding: 20px 0;
+}
+.submit input{
+    height: 40px;
+    width: 80px;
+}
+.submit .cancel{
+    margin: 0 30px;
+    background: gray;
+    color: black;
+}
+.submit .confirm{
+    margin: 0 30px;
+    background: green;
+    color: white;
+}
+.submit .cancel:hover{
+    background: gainsboro;
+}
+.submit .confirm:hover{
+    background: greenyellow;
+}
+
+
+/* Confirm code */
+.input{
+    margin: 80px 20px;
+}
+.input input{
+    height: 40px;
+    width: 80%;
+}
+
+
+/* Update password */
+.update_pwd{
+    margin: 35px 20px;
+}
+.update_pwd input{
+    height: 40px;
+    width: 80%;
+}
+

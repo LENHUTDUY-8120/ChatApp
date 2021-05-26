@@ -11,10 +11,19 @@
         if(mysqli_num_rows($query) > 0){
             $rowCode = mysqli_fetch_assoc($query);
             if($code == $rowCode['id_confirm']){
-                echo "Yes";
+                header("Location: ../update_pwd.php");
             }else{
-                echo "No";
+                echo "
+                    <script>
+                        alert('Something was wrong!');
+                        window.location.href = '../confirm.php';
+                    </script>
+                ";
             }
         }
+    }
+
+    if(isset($_POST['cancel'])){
+        header("Location: ../forgot_pwd.php");
     }
 ?>
