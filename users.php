@@ -1,10 +1,10 @@
 <?php
 	session_start();
 	include_once "php/config.php";
-	// if (!isset($_SESSION['user_id'])) {
-	// 	header("location: accountuser.php");
-	// }
-	$_SESSION['user_id'] = 1;
+	if (!isset($_SESSION['user_id'])) {
+		header("location: accountuser.php");
+	}
+	$userid = $_SESSION['user_id'];
 ?>
 <?php include_once "header.php"; ?>
 <body>
@@ -12,7 +12,7 @@
 		<section class="users">
 			<header>
 				<?php
-					$result = mysqli_query($conn, "SELECT * FROM USERS WHERE user_id = 1;");
+					$result = mysqli_query($conn, "SELECT * FROM users WHERE user_id = {$userid};");
 					if (mysqli_num_rows($result) > 0) {
 						$row = mysqli_fetch_assoc($result);
 					}

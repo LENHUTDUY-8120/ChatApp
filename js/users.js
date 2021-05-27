@@ -1,5 +1,6 @@
 const usersList = document.querySelector(".users-list");
 const searchBar = document.querySelector(".search input");
+var flag = false;
 
 setInterval(()=>{
 let xhr = new XMLHttpRequest();
@@ -9,7 +10,7 @@ xhr.onload = ()=>{
 		if (xhr.status === 200) {
 			let data = xhr.response;
 			console.log(data);
-			if(!searchBar.classList.contains("active")){
+			if(!flag){
           		usersList.innerHTML = data;	
           	}
 
@@ -20,13 +21,13 @@ xhr.send();
 }, 1000);
 
 function check() {
-	searchBar.classList.add("active");
+	flag = true;
 }
 
 searchBar.onkeyup = ()=>{
     let searchTerm = searchBar.value;
     if(searchTerm == ""){
-    	searchBar.classList.remove("active");
+    	flag = false;
   	}
   	let xhr = new XMLHttpRequest();
   	xhr.open("POST", "php/search.php", true);

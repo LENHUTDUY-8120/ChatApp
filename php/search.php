@@ -5,7 +5,7 @@
     $userid = $_SESSION['user_id'];
     $searchTerm = mysqli_real_escape_string($conn, $_POST['searchTerm']);
 
-    $sql = "SELECT * FROM USERS WHERE NOT user_id = {$userid} AND (fname LIKE '%{$searchTerm}%' OR lname LIKE '%{$searchTerm}%') ";
+    $sql = "SELECT * FROM users WHERE NOT user_id = {$userid} AND (fname LIKE '%{$searchTerm}%' OR lname LIKE '%{$searchTerm}%') ";
     $output = "";
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0){
