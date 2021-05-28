@@ -43,12 +43,12 @@
 				</div>
 				<div class="add-friend">
 					<div class="form" id="form-add">
-						<!-- <div class="search">
+						<div class="search">
 							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
 							<button id="search" ><i class="fas fa-search"></i></button>
 						</div>
 						<div class="users-list">
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</div>

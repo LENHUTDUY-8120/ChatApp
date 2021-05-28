@@ -15,9 +15,11 @@ CREATE TABLE users (
 	`status` varchar(255) NOT NULL
 );
 
-
+update users set id_confirm = "12412512" ;
 -- select * from users where user_id = 1;
--- SELECT * FROM users WHERE NOT user_id = 1 ORDER BY user_id DESC
+SELECT * FROM users WHERE user_id in ()
+
+
 insert into users(fname, lname, email, `password`, img, `status`) 
 	values("le","nhut duy","nhutduy30520@gmail.com","8120","icon.png","");
 insert into users(fname, lname, email, `password`, img, `status`) 
@@ -43,7 +45,6 @@ insert into messages(incoming_msg_id, outgoing_msg_id, msg)
 
 -- select * from messages;
 
-<<<<<<< HEAD
 SELECT * FROM messages WHERE (incoming_msg_id = 4
 			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
                 OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
@@ -69,10 +70,8 @@ insert into friends(person1,person2,confirm) values(5,1,"N");
 insert into friends(person1,person2,confirm) values(5,3,"N");
 
 select * from friends f join friends ff on ff.person1 = f.person2 where f.person1 = 5;
-=======
 -- SELECT * FROM messages WHERE (incoming_msg_id = 4
 --			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
 --                OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
->>>>>>> f6116c90d7caed15ab8a24cd733427fc3ad135c5
 
 COMMIT;
