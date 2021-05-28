@@ -42,3 +42,18 @@ searchBar.onkeyup = ()=>{
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.send("searchTerm=" + searchTerm);
 }
+
+
+
+// Switch Frame
+var FormAdd = document.getElementById("form-add");
+var FormChat = document.getElementById("form-chat");
+
+function chat(){
+    FormChat.style.transform = "translateX(0px)";
+    FormAdd.style.transform = "translateX(0px)";
+}
+function add(){
+    FormChat.style.transform = "translateX(-470px)";
+    FormAdd.style.transform = "translateX(-470px)";
+}
