@@ -34,11 +34,11 @@ CREATE TABLE messages (
 );
 
 insert into messages(incoming_msg_id, outgoing_msg_id, msg) 
-	values(1,3,"hello");
+	values(4,2,"hello");
 insert into messages(incoming_msg_id, outgoing_msg_id, msg) 
-	values(1,3,"how are you???");
+	values(4,2,"how are you???");
 insert into messages(incoming_msg_id, outgoing_msg_id, msg) 
-	values(3,1,"im fine, thank you and you!!!");
+	values(4,2,"im fine, thank you and you!!!");
 
 
 select * from messages;
@@ -46,5 +46,27 @@ select * from messages;
 SELECT * FROM messages WHERE (incoming_msg_id = 4
 			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
                 OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
+                
+SELECT * FROM messages inner JOIN users ON users.user_id = messages.outgoing_msg_id
+                WHERE (outgoing_msg_id = 4 AND incoming_msg_id = 2)
+                OR (outgoing_msg_id = 2 AND incoming_msg_id = 4) ORDER BY msg_id;
+
+create table friends(
+	f_id int primary key auto_increment,
+    person1 int,
+    person2 int,
+    confirm char(1),
+    foreign key (person1) references users(user_id),
+    foreign key (person1) references users(user_id)
+);
+
+insert into friends(person1,person2,confirm) values(1,2,"Y");
+insert into friends(person1,person2,confirm) values(2,5,"Y");
+insert into friends(person1,person2,confirm) values(2,3,"Y");
+insert into friends(person1,person2,confirm) values(5,4,"N");
+insert into friends(person1,person2,confirm) values(5,1,"N");
+insert into friends(person1,person2,confirm) values(5,3,"N");
+
+select * from friends f join friends ff on ff.person1 = f.person2 where f.person1 = 5;
 
 COMMIT;

@@ -21,7 +21,7 @@
             $you = "";
         }
 
-        ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
+        ($row['status'] == "Offline") ? $offline = "offline" : $offline = "";
 
         $output .= '<a href="chat.php?user_id='. $row['user_id'] .'">
                     <div class="content">
