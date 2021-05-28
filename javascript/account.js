@@ -90,7 +90,6 @@ continueBtnLogin.onclick = ()=>{
     // We have to send the form data through ajax to php
     let formData = new FormData(formLogin); // Creating new formData Object
     xhr.send(formData); // sending the form data to php
+
+
 }
-
-
-

@@ -1,5 +1,5 @@
-CREATE DATABASE ChatApp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE ChatApp;
+-- CREATE DATABASE ChatApp CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- USE ChatApp;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -16,8 +16,8 @@ CREATE TABLE users (
 );
 
 
-select * from users where user_id = 1;
-SELECT * FROM users WHERE NOT user_id = 1 ORDER BY user_id DESC
+-- select * from users where user_id = 1;
+-- SELECT * FROM users WHERE NOT user_id = 1 ORDER BY user_id DESC
 insert into users(fname, lname, email, `password`, img, `status`) 
 	values("le","nhut duy","nhutduy30520@gmail.com","8120","icon.png","");
 insert into users(fname, lname, email, `password`, img, `status`) 
@@ -41,8 +41,9 @@ insert into messages(incoming_msg_id, outgoing_msg_id, msg)
 	values(4,2,"im fine, thank you and you!!!");
 
 
-select * from messages;
+-- select * from messages;
 
+<<<<<<< HEAD
 SELECT * FROM messages WHERE (incoming_msg_id = 4
 			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
                 OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
@@ -68,5 +69,10 @@ insert into friends(person1,person2,confirm) values(5,1,"N");
 insert into friends(person1,person2,confirm) values(5,3,"N");
 
 select * from friends f join friends ff on ff.person1 = f.person2 where f.person1 = 5;
+=======
+-- SELECT * FROM messages WHERE (incoming_msg_id = 4
+--			OR outgoing_msg_id = 4) AND (outgoing_msg_id = 1
+--                OR incoming_msg_id = 1) ORDER BY msg_id DESC LIMIT 1;
+>>>>>>> f6116c90d7caed15ab8a24cd733427fc3ad135c5
 
 COMMIT;

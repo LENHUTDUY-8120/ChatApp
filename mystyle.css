@@ -21,6 +21,7 @@ body{
 	max-width: 450px;
 	width: 100%;
 	border-radius: 10px;
+  height: 670px;
 }
 .wrapper img{
 	object-fit: cover;
@@ -29,22 +30,48 @@ body{
 
 
 /* USERS LIST CSS */
+.form-container{
+  width: 390px;
+  height: 570px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container span{
+  font-weight: bold;
+  padding-top: 10px;
+  width: 150px;
+  display: inline-block;
+  cursor: pointer;
+}
+.form-btn{
+  display: inline-block;
+}
+
+.form-container .form{
+  position: absolute;
+  max-width: 390px;
+  transition: transform 1s;
+}
+#form-add{
+  margin-left: 470px;
+}
+
 .users{
 	padding: 25px 30px;
 }
-
-.users header {
+.users header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid black;
 }
-
 .users header .content img{
 	width: 50px;
 	height: 50px;
 }
-
 .content{
 	display: flex;
 	align-items: center;
@@ -62,35 +89,32 @@ body{
 .info span{
 	font-size: 18px;
 	font-weight: 500;
+  width: 100%;
 }
-
 .logout{
 	display: block;
-    background: #333;
-    color: #fff;
-    outline: none;
-    border: none;
-    padding: 7px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 17px;
+  background: #333;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
 }
-
 .search{
 	margin: 20px 0px;
 	display: flex;
-	position: relative;
+	/* position: relative; */
 	align-items: center;
 	justify-content: space-between;
 }
-
 .search .text{
 	font-size: 15px;
 }
-
 .search input{
   	height: 40px;
-  	width: calc(100% - 50px);
+  	width: 400px;
   	font-size: 16px;
   	padding: 0 13px;
   	border: 1px solid #e6e6e6;
@@ -98,7 +122,6 @@ body{
   	border-radius: 5px 0 0 5px;
     transition: all 0.3s ease;
 }
-
 .search button{
 	width: 45px;
 	height: 40px;
@@ -110,10 +133,8 @@ body{
 	cursor: pointer;
 	font-size: 17px;
 }
-
-
 .users-list{
-	max-height: 410px;
+	max-height: 470px;
 	overflow-y: auto;
 }
 

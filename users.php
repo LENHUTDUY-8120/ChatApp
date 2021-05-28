@@ -26,11 +26,31 @@
 				</div>
 				<a href="#" class="logout">Logout</a>
 			</header>
-			<div class="search">
-        		<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
-        		<button id="search" ><i class="fas fa-search"></i></button>
-			</div>
-			<div class="users-list">
+			<div class="form-container">
+				<div class="form-btn">
+					<span onclick="chat()">Chat</span>
+					<span onclick="add()">Add Friend</span>
+				</div>
+				<div class="chat-user">
+					<div class="form" id="form-chat">
+						<div class="search">
+							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
+							<button id="search" ><i class="fas fa-search"></i></button>
+						</div>
+						<div class="users-list">
+						</div>
+					</div>
+				</div>
+				<div class="add-friend">
+					<div class="form" id="form-add">
+						<!-- <div class="search">
+							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
+							<button id="search" ><i class="fas fa-search"></i></button>
+						</div>
+						<div class="users-list">
+						</div> -->
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
