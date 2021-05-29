@@ -56,3 +56,29 @@ function send_request(id){
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.send("friend_id=" + id);
 }
+
+function accept(id){
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST","php/accept.php", true);
+	xhr.onload = ()=>{
+		if(xhr.readyState === XMLHttpRequest.DONE){
+			if (xhr.status === 200)
+				document.getElementById(id).style.display = "none";
+			}
+		}
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.send("friend_id=" + id);
+}
+
+function remove(id){
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST","php/remove.php", true);
+	xhr.onload = ()=>{
+		if(xhr.readyState === XMLHttpRequest.DONE){
+			if (xhr.status === 200)
+				document.getElementById(id).style.display = "none";
+			}
+		}
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.send("friend_id=" + id);
+}

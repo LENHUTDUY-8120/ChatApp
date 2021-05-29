@@ -30,7 +30,7 @@
                     if(in_array($img_ext, $extensions) === true){
                         
                         if(move_uploaded_file($tmp_name, "images/".$img_name)){
-                            $status = "Active now";
+                            $status = "Active";
 
                             if($password == $repassword){
                                 $password = password_hash($password, PASSWORD_DEFAULT);
