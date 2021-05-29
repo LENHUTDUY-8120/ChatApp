@@ -2,7 +2,8 @@ const form = document.querySelector(".typing-area"),
 incoming_id = form.querySelector(".incoming_id").value,
 inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
-chatBox = document.querySelector(".chat-box");
+chatBox = document.querySelector(".chat-box"),
+status = document.querySelector("#status");
 
 var flag = true;
 
@@ -46,6 +47,21 @@ chatBox.onmouseleave = ()=>{
     flag = true;
 }
 
+function check_status(){
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "php/get-status.php?incoming_id="+incoming_id, true);
+    xhr.onload = ()=>{
+      if(xhr.readyState === XMLHttpRequest.DONE){
+          if(xhr.status === 200){
+            let data = xhr.response;
+            console.log(data);
+            status.innerHTML = data;
+          }
+      }
+    }
+    xhr.send();
+};
+
 setInterval(() =>{
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/get-chat.php", true);
@@ -54,6 +70,7 @@ setInterval(() =>{
           if(xhr.status === 200){
             let data = xhr.response;
             chatBox.innerHTML = data;
+            check_status();
             if(flag){
                 scrollToBottom();
             }
@@ -63,4 +80,3 @@ setInterval(() =>{
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send("incoming_id="+incoming_id);
 }, 500);
-
