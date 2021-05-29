@@ -1,10 +1,11 @@
 
 .form-container{
-    background-color: yellow;
-    margin: auto;
-    text-align: center;
+    background: white;
     width: 400px;
     height: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 0px #666;
 }
 .title{
@@ -21,6 +22,8 @@ hr{
 .email input{
     height: 40px;
     width: 80%;
+    border-radius: 10px;
+    outline: none;
 }
 .submit{
     padding: 20px 0;
@@ -28,6 +31,7 @@ hr{
 .submit input{
     height: 40px;
     width: 80px;
+    border-radius: 5px;
 }
 .submit .cancel{
     margin: 0 30px;
@@ -54,6 +58,8 @@ hr{
 .input input{
     height: 40px;
     width: 80%;
+    border-radius: 10px;
+    outline: none;
 }
 
 
@@ -64,5 +70,7 @@ hr{
 .update_pwd input{
     height: 40px;
     width: 80%;
+    border-radius: 10px;
+    outline: none;
 }
 
