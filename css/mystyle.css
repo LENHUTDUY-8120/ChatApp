@@ -183,8 +183,9 @@ body{
   color: #468669;
   padding-left: 10px;
 }
-.users-list a .status-dot.offline{
+.users-list a .status-dotoffline{
   color: #ccc;
+  font-size: 12px;
 }
 
 /* ADD FRIENDS CSS*/
@@ -202,7 +203,6 @@ body{
   color: red;
   border: none;
 }
-
 
 /* CHAT CSS */
 .chat-area header{

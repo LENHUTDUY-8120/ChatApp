@@ -9,7 +9,7 @@
                                     <span>'. $row['fname']. " " . $row['lname'] .'</span>
                                 </div>
                             </div>
-                                <button id="'. $row['user_id'] .'" class="confirm-icon" onclick="send_request(this.id)"><i class="fas fa-user-plus fa-2x"></i></button>
+                                <button id="'. $row['user_id'] .'" class="confirm-icon" onclick="send_request(this.id)"><i class="fas fa-user-plus"></i></button>
                         </a>';
         }
     }

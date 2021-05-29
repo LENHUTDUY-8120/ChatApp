@@ -32,6 +32,6 @@
 		</section>
 	</div>
 
-	<script src="js/chat.js"></script>
+	<script src="javascript/chat.js"></script>
 </body>
 </html>

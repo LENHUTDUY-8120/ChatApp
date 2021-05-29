@@ -27,11 +27,11 @@
                     <div class="content">
                     <img src="php/images/'. $row['img'] .'" alt="">
                     <div class="info">
-                        <span>'. $row['fname']. " " . $row['lname'] .'</span>
-                        <p>'. $you . $msg .'</p>
+                        <span>'. $row['fname']. " " . $row['lname'] .'</span><br>
+                        <span style="font-size: 16px; opacity: 0.7;">'. $you . $msg .'</span>
                     </div>
                     </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
+                    <div class="status-dot'.$offline.'"><i class="fas fa-circle"></i></div>
                 </a>';
     }
 ?>

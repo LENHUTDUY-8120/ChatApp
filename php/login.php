@@ -15,7 +15,11 @@
             if(password_verify($password, $pwd)){
 
                 $_SESSION['user_id'] = $row['user_id'];
-                echo "Success";
+                $sql = "UPDATE users SET status = 'Active' where user_id = " . $_SESSION['user_id'];
+                $rs = $conn->query($sql);
+                if($rs){
+                    echo "Success";    
+                }
             }else{
                 echo "Email or Password is incorrect!";
             }

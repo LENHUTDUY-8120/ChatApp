@@ -35,7 +35,7 @@
 				<div class="chat-user">
 					<div class="form" id="form-chat">
 						<div class="search">
-							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
+							<input id="search_kw" oninput="check()" type="text" placeholder="Find your friends ...">
 							<button id="search" ><i class="fas fa-search"></i></button>
 						</div>
 						<div class="users-list" id="list1">
@@ -45,7 +45,7 @@
 				<div class="add-friend">
 					<div class="form" id="form-add">
 						<div class="search"> 
-							<input id="search_kw1" oninput="check1()" type="text" placeholder="Enter name to search...">
+							<input id="search_kw1" oninput="check1()" type="text" placeholder="Find other people ...">
 							<button id="search1" ><i class="fas fa-search"></i></button>
 						</div>
 						<div class="users-list" id="users-list">
