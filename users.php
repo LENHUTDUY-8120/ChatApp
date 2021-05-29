@@ -24,7 +24,7 @@
 						<p><?php echo $row['status']; ?></p>
 					</div>
 				</div>
-				<a href="#" class="logout">Logout</a>
+				<a href="php/logout.php?logout" class="logout">Logout</a>
 			</header>
 			<div class="form-container">
 				<div class="form-btn">
@@ -37,24 +37,25 @@
 							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
 							<button id="search" ><i class="fas fa-search"></i></button>
 						</div>
-						<div class="users-list">
+						<div class="users-list" id="list1">
 						</div>
 					</div>
 				</div>
 				<div class="add-friend">
 					<div class="form" id="form-add">
-						<div class="search">
-							<input id="search_kw" oninput="check()" type="text" placeholder="Enter name to search...">
-							<button id="search" ><i class="fas fa-search"></i></button>
+						<div class="search"> 
+							<input id="search_kw1" oninput="check1()" type="text" placeholder="Enter name to search...">
+							<button id="search1" ><i class="fas fa-search"></i></button>
 						</div>
-						<div class="users-list">
+						<div class="users-list" id="users-list">
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</div>
-	<script src="js/users.js"></script>
+	<script src="javascript/users.js"></script>
+	<script src="javascript/friend.js"></script>
 </body>
 </html>
 

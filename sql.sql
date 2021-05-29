@@ -15,9 +15,12 @@ CREATE TABLE users (
 	`status` varchar(255) NOT NULL
 );
 
-update users set id_confirm = "12412512" ;
+UPDATE users SET status = "Offline" WHERE user_id=1;
+update users set img="icon.png" where user_id = 5;
 -- select * from users where user_id = 1;
-SELECT * FROM users WHERE user_id in ()
+SELECT * FROM users WHERE user_id not in (select person1 from friends where person2 = 1 
+										union select person2 from friends where person1 = 1)
+                                        AND (fname LIKE '%mi%' OR lname LIKE '%nil%');
 
 
 insert into users(fname, lname, email, `password`, img, `status`) 
@@ -67,7 +70,11 @@ insert into friends(person1,person2,confirm) values(2,5,"Y");
 insert into friends(person1,person2,confirm) values(2,3,"Y");
 insert into friends(person1,person2,confirm) values(5,4,"N");
 insert into friends(person1,person2,confirm) values(5,1,"N");
-insert into friends(person1,person2,confirm) values(5,3,"N");
+insert into friends(person1,person2,confirm) values(3,1,"N");
+insert into friends(person1,person2,confirm) values(4,1,"N");
+
+select * from users where user_id in (
+		select person1 from friends where person2 = 3 and confirm="");
 
 select * from friends f join friends ff on ff.person1 = f.person2 where f.person1 = 5;
 -- SELECT * FROM messages WHERE (incoming_msg_id = 4

@@ -17,15 +17,15 @@ body{
 }
 
 .wrapper{
-  background: #fff;
-  max-width: 450px;
-  width: 100%;
-  border-radius: 10px;
+	background: #fff;
+	max-width: 450px;
+	width: 100%;
+	border-radius: 10px;
   height: 670px;
 }
 .wrapper img{
-  object-fit: cover;
-  border-radius: 50%;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 
@@ -60,21 +60,21 @@ body{
 }
 
 .users{
-  padding: 25px 30px;
+	padding: 25px 30px;
 }
 .users header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
 }
 .users header .content img{
-  width: 50px;
-  height: 50px;
+	width: 50px;
+	height: 50px;
 }
 .content{
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .content .info{
@@ -83,17 +83,17 @@ body{
 }
 
 .info{
-  margin-left: 15px;
+	margin-left: 15px;
 }
 
 .info span{
-  font-size: 18px;
-  font-weight: 500;
+	font-size: 18px;
+	font-weight: 500;
   width: 100%;
   text-align: left;
 }
 .logout{
-  display: block;
+	display: block;
   background: #333;
   color: #fff;
   outline: none;
@@ -104,43 +104,43 @@ body{
   font-size: 17px;
 }
 .search{
-  margin: 20px 0px;
-  display: flex;
-  /* position: relative; */
-  align-items: center;
-  justify-content: space-between;
+	margin: 20px 0px;
+	display: flex;
+	/* position: relative; */
+	align-items: center;
+	justify-content: space-between;
 }
 .search .text{
-  font-size: 15px;
+	font-size: 15px;
 }
 .search input{
-    height: 40px;
-    width: 400px;
-    font-size: 16px;
-    padding: 0 13px;
-    border: 1px solid #e6e6e6;
-    outline: none;
-    border-radius: 5px 0 0 5px;
+  	height: 40px;
+  	width: 400px;
+  	font-size: 16px;
+  	padding: 0 13px;
+  	border: 1px solid #e6e6e6;
+  	outline: none;
+  	border-radius: 5px 0 0 5px;
     transition: all 0.3s ease;
 }
 .search button{
-  width: 45px;
-  height: 40px;
-  border: none;
-  outline: none;
-  background: #fff;
-  color: #333;
-  border-radius: 0px 5px 5px 0px;
-  cursor: pointer;
-  font-size: 17px;
+	width: 45px;
+	height: 40px;
+	border: none;
+	outline: none;
+	background: #fff;
+	color: #333;
+	border-radius: 0px 5px 5px 0px;
+	cursor: pointer;
+	font-size: 17px;
 }
 .users-list{
-  max-height: 470px;
-  overflow-y: auto;
+	max-height: 470px;
+	overflow-y: auto;
 }
 
 .users-list::-webkit-scrollbar{
-  width: 0px;
+	width: 0px;
 }
 
 .users-list a{
@@ -154,7 +154,6 @@ body{
   border-bottom: 1px solid #e6e6e6;
   justify-content: space-between;
 }
-
 
 .users-list a:last-child{
   margin-bottom: 0px;
@@ -170,27 +169,12 @@ body{
   color: #67676a;
 }
 
-.users-list a .status-dot{
-  font-size: 12px;
-  color: #468669;
-  padding-left: 10px;
+.icon{
+  display: inline;
+  color: #fff;
+  outline: none;
+  border: none;
 }
-.users-list a .status-dot.offline{
-  color: #ccc;
-}
-
-/* ADD FRIENDS CSS*/
-.confirm-icon{
-  display: block;
-  color: green;
-}
-
-.delete-icon{
-  display: block;
-  color: red;
-  white-space: nowrap;
-}
-
 
 /* CHAT CSS */
 .chat-area header{
@@ -211,12 +195,12 @@ body{
 }
 
 .chat-box{
-  position: relative;
+	position: relative;
     min-height: 500px;
-  max-height: 500px;
-  overflow-y: auto;
-    padding: 10px 30px 20px 30px;
-    background: #f7f7f7;
+ 	max-height: 500px;
+ 	overflow-y: auto;
+  	padding: 10px 30px 20px 30px;
+  	background: #f7f7f7;
 }
 
 .chat-box .chat{
@@ -265,7 +249,7 @@ body{
 }
 
 .chat-box::-webkit-scrollbar{
-  width: 0px;
+	width: 0px;
 }
 
 .typing-area{

@@ -1,5 +1,6 @@
 const usersList = document.querySelector(".users-list");
 const searchBar = document.querySelector(".search input");
+
 var flag = false;
 
 setInterval(()=>{
@@ -9,7 +10,6 @@ xhr.onload = ()=>{
 	if(xhr.readyState === XMLHttpRequest.DONE){
 		if (xhr.status === 200) {
 			let data = xhr.response;
-			console.log(data);
 			if(!flag){
           		usersList.innerHTML = data;	
           	}
@@ -18,7 +18,7 @@ xhr.onload = ()=>{
 	}
 }
 xhr.send();
-}, 1000);
+}, 500);
 
 function check() {
 	flag = true;
