@@ -19,7 +19,7 @@
 				<img src="php/images/<?php echo $row['img'] ?>">
 				<div class="info">
 					<span><?php echo $row['fname'] . " " . $row['lname'];?></span>
-						<p><?php echo $row['status']; ?></p>
+						<p id="status"></p>
 				</div>	
 			</header>
 			<div class="chat-box">
@@ -32,6 +32,6 @@
 		</section>
 	</div>
 
-	<script src="js/chat.js"></script>
+	<script src="javascript/chat.js"></script>
 </body>
 </html>

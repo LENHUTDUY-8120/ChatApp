@@ -65,6 +65,8 @@ create table friends(
     foreign key (person1) references users(user_id)
 );
 
+INSERT into friends(person1,person2,status) VALUES(6,1,'N');
+
 insert into friends(person1,person2,confirm) values(1,2,"Y");
 insert into friends(person1,person2,confirm) values(2,5,"Y");
 insert into friends(person1,person2,confirm) values(2,3,"Y");
