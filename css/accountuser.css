@@ -1,5 +1,6 @@
 body{
     margin-top: 10%;
+    background: black;
 }
 .form-container{
     margin: auto;
@@ -10,6 +11,8 @@ body{
     box-shadow: 0px 0px 10px 0px #666;
     overflow: hidden;
     border-radius: 10px;
+
+    background: white;
 }
 .title h1{
     font-size: 27px;

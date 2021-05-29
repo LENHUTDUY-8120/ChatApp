@@ -1,3 +1,0 @@
-# ChatApp
-
-Never Give Up!!!
