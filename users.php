@@ -28,8 +28,9 @@
 			</header>
 			<div class="form-container">
 				<div class="form-btn">
-					<span onclick="chat()">Chat</span>
+					<span onclick="chat()">Friends List</span>
 					<span onclick="add()">Add Friend</span>
+					<hr id="Indicator">
 				</div>
 				<div class="chat-user">
 					<div class="form" id="form-chat">

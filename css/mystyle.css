@@ -58,6 +58,14 @@ body{
 #form-add{
   margin-left: 470px;
 }
+#Indicator{
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  transform: translateX(23px);    
+  transition: transform 1s;
+}
 
 .users{
   padding: 25px 30px;
@@ -180,15 +188,19 @@ body{
 }
 
 /* ADD FRIENDS CSS*/
-.confirm-icon{
-  display: block;
-  color: green;
+.confirm-icon, .delete-icon{
+  border: none;
+  font-size: 25px;
+  background: none;
+  cursor: pointer;
 }
-
+.confirm-icon{
+  color: green;
+  margin-left: 120px;
+}
 .delete-icon{
-  display: block;
   color: red;
-  white-space: nowrap;
+  border: none;
 }
 
 

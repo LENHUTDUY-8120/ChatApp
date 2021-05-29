@@ -48,12 +48,16 @@ searchBar.onkeyup = ()=>{
 // Switch Frame
 var FormAdd = document.getElementById("form-add");
 var FormChat = document.getElementById("form-chat");
+var Indicator = document.getElementById("Indicator");
 
 function chat(){
     FormChat.style.transform = "translateX(0px)";
     FormAdd.style.transform = "translateX(0px)";
+	Indicator.style.transform = "translateX(23px)";
+
 }
 function add(){
     FormChat.style.transform = "translateX(-470px)";
     FormAdd.style.transform = "translateX(-470px)";
+	Indicator.style.transform = "translateX(178px)";
 }
