@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Forgot Password</title>
-    <link rel='stylesheet' href='forgot_pwd.css'>
+    <link rel='stylesheet' href='css/forgot_pwd.css'>
 </head>
 <body>
     <div class="form-container">
