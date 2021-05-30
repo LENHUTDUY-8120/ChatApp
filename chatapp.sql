@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 29, 2021 lúc 04:57 PM
+-- Thời gian đã tạo: Th5 30, 2021 lúc 08:21 AM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 7.4.14
 
@@ -34,6 +34,18 @@ CREATE TABLE `friends` (
   `confirm` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `friends`
+--
+
+INSERT INTO `friends` (`f_id`, `person1`, `person2`, `confirm`) VALUES
+(10, 8, 9, 'Y'),
+(11, 18, 8, 'N'),
+(12, 15, 8, 'Y'),
+(14, 8, 12, 'N'),
+(15, 10, 8, 'Y'),
+(16, 10, 15, 'Y');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +58,24 @@ CREATE TABLE `messages` (
   `outgoing_msg_id` int(255) NOT NULL,
   `msg` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES
+(35, 9, 8, 'Hello Duy :3'),
+(36, 8, 9, 'Hello Nil :3'),
+(37, 9, 8, 'How are you ?'),
+(38, 8, 9, 'Iam good. And you ?'),
+(39, 9, 8, 'Iam not bad '),
+(40, 8, 10, 'Hello Nil'),
+(41, 10, 8, 'What\'s up ?'),
+(42, 8, 10, 'hihi'),
+(43, 15, 10, 'Hello Lam !!'),
+(44, 8, 15, 'Hi'),
+(45, 15, 8, 'What time is it ?'),
+(46, 10, 15, 'Hello !!');
 
 -- --------------------------------------------------------
 
@@ -69,7 +99,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `id_confirm`, `fname`, `lname`, `email`, `password`, `img`, `status`) VALUES
-(8, 878943690, 'Nil', 'Nguyen', 'nilnguyenkl@gmail.com', '$2y$10$GNP9AMgyx7nVmlIEZxg.BedQ2e1T13vt4GSPQVUPqTSxaX30SIOJi', 'nil.jpg', 'Offline'),
+(8, 1100171608, 'Nil', 'Nguyen', 'nilnguyenkl@gmail.com', '$2y$10$rXUAOgkvvKCihFHD/zOmLOU/iGSkiLux4LVyD6fgakSVcWnuV2a7a', 'nil.jpg', 'Offline'),
 (9, 424878108, 'Duy', 'Nhut', 'nhutduy30520@gmail.com', '$2y$10$/bmD3NDorA8uHj1zDujvGe1Zs/Y7GOZFd4pSxuFDpBAQ440wDLYiG', 'duy.jpg', 'Offline'),
 (10, 53024718, 'Thuan', 'My', 'mythuan@gmail.com', '$2y$10$whIXxuo/fusrEuWV3esfV.qf2gaNmmF9Jt6ZKp1wtl5guRov2/s6q', 'thuan.jpg', 'Offline'),
 (11, 1570647064, 'Chien', 'Thien', 'thienchien@gmail.com', '$2y$10$OoPoDYezo3mnXo/TKdZyP.0SIwbmkqk.p6wqNG0sWBzCGg1NEOIHC', 'chien.jpg', 'Offline'),
@@ -78,7 +108,8 @@ INSERT INTO `users` (`user_id`, `id_confirm`, `fname`, `lname`, `email`, `passwo
 (14, 1009665715, 'Mai', 'Ngan', 'maingan@gmail.com', '$2y$10$LoGwdsHeVR9KiIyAkChJeucc3Z5BPnPd6rUtts0qAIWUXRfuhI94m', 'ngan.jpg', 'Offline'),
 (15, 44043662, 'Truc', 'Lam', 'truclam@gmail.com', '$2y$10$wvettFxmt0ZHQQ96iYH1EuEdS4H3ZxkQaWIXLdnG2qSGBlGAh9gGq', 'lam.jpg', 'Offline'),
 (16, 589397870, 'Hoang', 'Khang', 'hoangkhang@gmail.com', '$2y$10$xh1za98uKdwf2ybpqi0Kc.qiQu0ihasKWIJr/EeFysor8ChZ13the', 'Khang.jpg', 'Offline'),
-(17, 673058602, 'Thao', 'Nguyen', 'thaonguyen@gmail.com', '$2y$10$F9/zFHT/vGKbmlZ5B4TBPOejk1Cjly.tuH4u9N3tGzkXVSgVsDsyq', 'nguyen.jpg', 'Offline');
+(17, 673058602, 'Thao', 'Nguyen', 'thaonguyen@gmail.com', '$2y$10$F9/zFHT/vGKbmlZ5B4TBPOejk1Cjly.tuH4u9N3tGzkXVSgVsDsyq', 'nguyen.jpg', 'Offline'),
+(18, 851255564, 'Quoc', 'Su', 'quocsu@gmail.com', '$2y$10$pq0wIlMyl1/M4e9kPs.zgOp0u3OLRiqQxKjD6zIRwXojpwBD0VPt6', 'su.jpg', 'Offline');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -111,19 +142,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `friends`
 --
 ALTER TABLE `friends`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
